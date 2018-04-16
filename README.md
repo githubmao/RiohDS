@@ -206,10 +206,10 @@
 >&ensp;&ensp;行内短注释应在代码后接两个空格, #, 再接一个空格.
 >
 ><pre><code>&ensp;&ensp;# Create histogram of frequency of campaigns by pct budget spent.hist(df$pctSpent,
-&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;breaks = "scott",  # method for choosing number of buckets
-&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;main   = "Histogram: fraction budget spent by campaignid",
-&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;xlab   = "Fraction of budget spent",     
-&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;ylab   = "Frequency (count of campaignids)")
+>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;breaks = "scott",  # method for choosing number of buckets
+>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;main   = "Histogram: fraction budget spent by campaignid",
+>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;xlab   = "Fraction of budget spent",     
+>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;ylab   = "Frequency (count of campaignids)")
 ></code></pre>
 >
 ><h3 id="11">11.函数的定义和调用</h3>
@@ -240,27 +240,27 @@
 >
 ><pre><code>CalculateSampleCovariance <- function(x, y, verbose = TRUE) {
 ># Computes the sample covariance between two vectors.  
-#  
-# Args:  
-#   x: One of two vectors whose sample covariance is to be calculated.  
-#   y: The other vector. x and y must have the same length, greater than one,  
-#      with no missing values.  
-#   verbose: If TRUE, prints sample covariance; if not, not. Default is TRUE.  
-#  
-# Returns:  
-#   The sample covariance between x and y.  n <- length(x)  
-# Error handling  
-if(n <= 1 || n != length(y)) {
-&ensp;&ensp;&ensp;stop("Arguments x and y have invalid lengths: ",
-&ensp;&ensp;&ensp;&ensp;&ensp;length(x), " and ", length(y), ".")  
-}  
-if (TRUE %in% is.na(x) || TRUE %in% is.na(y)) {    
-&ensp;&ensp;&ensp;stop(" Arguments x and y must not have missing values.")  
-}
-covariance <- var(x, y)
-if (verbose)
-&ensp;&ensp;&ensp;cat("Covariance = ", round(covariance, 4), ".\n", sep = "")
-&ensp;&ensp;return(covariance)}
+>#  
+># Args:  
+>#   x: One of two vectors whose sample covariance is to be calculated.  
+>#   y: The other vector. x and y must have the same length, greater than one,  
+>#      with no missing values.  
+>#   verbose: If TRUE, prints sample covariance; if not, not. Default is TRUE.  
+>#  
+># Returns:  
+>#   The sample covariance between x and y.  n <- length(x)  
+># Error handling  
+>if(n <= 1 || n != length(y)) {
+>&ensp;&ensp;&ensp;stop("Arguments x and y have invalid lengths: ",
+>&ensp;&ensp;&ensp;&ensp;&ensp;length(x), " and ", length(y), ".")  
+>}  
+>if (TRUE %in% is.na(x) || TRUE %in% is.na(y)) {    
+>&ensp;&ensp;&ensp;stop(" Arguments x and y must not have missing values.")  
+>}
+>covariance <- var(x, y)
+>if (verbose)
+>&ensp;&ensp;&ensp;cat("Covariance = ", round(covariance, 4), ".\n", sep = "")
+>&ensp;&ensp;return(covariance)}
 ></code></pre>
 >
 ><h3 id="14">14.TODO 书写风格</h3>
