@@ -299,5 +299,7 @@
 >&ensp;&ensp;http://www.maths.lth.se/help/R/RCC/ - R Coding Conventions
 >
 >&ensp;&ensp;http://ess.r-project.org/ - For emacs users. This runs R in your emacs and has an emacs mode.
+>
+>&ensp;&ensp;https://google.github.io/styleguide/Rguide.xml#spacing - En version.
 
 
