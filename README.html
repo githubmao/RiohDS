@@ -121,15 +121,53 @@ $(document).ready(function () {
 </div>
 
 
-<div id="riohds" class="section level1">
-<h1>RiohDS数据代码管理</h1>
-<div id="r" class="section level2">
-<h2>1. 仅针对R；</h2>
-</div>
-<div id="-googles-r-style-guide" class="section level2">
-<h2>2. 共享的代码请尽量遵循 Google’s R Style Guide。</h2>
+<h1>
+RiohDS数据代码管理
+</h1>
+<h2>
+<ol style="list-style-type: decimal">
+<li>仅针对R；
+</h2>
+<h2>
+<ol start="2" style="list-style-type: decimal">
+<li>共享的代码请尽量遵循 <a href="#RStyle">Google’s R Style Guide</a>风格；
+</h2>
+<h2>
+<ol start="3" style="list-style-type: decimal">
+<li>新增功能函数规则：。
+</h2>
+<h3>
+    + 建立新的.R文件，并写入新增函数；
+</h3>
+<h3>
+    + 更新README.md文档中的<a href="#functionDescription">函数功能简要说明</a>
+</h3>
+<h3>
+      （如果是绘图语句，最好再给出样图）；
+</h3>
+<h3>
+    + Push更新文件。
+</h3></li>
+</ol></li>
+</ol></li>
+</ol>
+<hr />
+<h2 id="functionDescription">
+函数功能简要说明
+</h2>
+<ol style="list-style-type: decimal">
+<li><p><strong>RenameSimDataV12</strong>：重命名UC-win/Road ver12.0版本输出数据变量名.</p></li>
+<li><p><strong>RenameNCUTSimData</strong>：重命名NCUT版本UC-win/Road(即ver10.0)输出数据变量名.</p></li>
+<li><p><strong>RenameSimDataV4</strong>：重命名UC-win/Road ver4.0版本输出数据变量名.</p></li>
+</ol>
+<hr />
 <blockquote>
-<p><strong>概要: R编码风格约定</strong></p>
+<h2 id="RStyle">
+Google’s R Style Guide
+</h2>
+<h2>
+<strong>概要: R编码风格约定</strong>
+</h2>
 <p><a href="#1">1. 文件命名</a>: 以 .R (大写) 结尾</p>
 <p><a href="#2">2. 标识符命名</a>: variable.name, FunctionName, kConstantName</p>
 <p><a href="#3">3. 单行长度</a>: 不超过 80 个字符</p>
@@ -154,13 +192,13 @@ $(document).ready(function () {
 <strong>表示和命名</strong>
 </h2>
 <h3 id="1">
-<strong>1.文件命名</strong>
+1.文件命名
 </h3>
 <p>  文件名应以 .R (大写) 结尾, 文件名本身要有意义.</p>
 <p>  正例: predict_ad_revenue.R</p>
 <p>  反例: foo.R</p>
 <h3 id="2">
-<strong>2.标识符命名</strong>
+2.标识符命名
 </h3>
 <p>  在标识符中不要使用下划线 ( _ ) 或连字符 ( - ). 标识符应根据如下惯例命名. 变量名应使用点 (.) 分隔所有的小写字母或单词; 函数名首字母大写, 不用点分隔 &gt;(所含单词首字母大写); 常数命名规则同函数, 但需使用一个 k 开头.</p>
 <ul>
@@ -179,19 +217,19 @@ $(document).ready(function () {
 <li>kConstantName</li>
 </ul>
 <h2>
-<strong>语法</strong>
+语法
 </h2>
 <h3 id="3">
-<strong>3.单行长度</strong>
+3.单行长度
 </h3>
 <p>  最大单行长度为 80 个字符.</p>
 <h3 id="4">
-<strong>4.缩进</strong>
+4.缩进
 </h3>
 <p>  使用两个空格来缩进代码. 永远不要使用制表符或混合使用二者.</p>
 <p>  例外: 当括号内发生折行时, 所折行与括号内的第一个字符对齐.</p>
 <h3 id="5">
-<strong>5.空白</strong>
+5.空白
 </h3>
 <p>  在所有二元操作符 (=, +, -, &lt;-, 等等) 的两侧加上空格.</p>
 <p>  例外: 在函数调用中传递参数时 = 两边的空格可加可不加.</p>
@@ -234,7 +272,7 @@ $(document).ready(function () {
 <p>  反例:</p>
 <pre><code>  if ( debug )  # debug 的两边不要加空格x[1,]  # 需要在逗号后加一个空格 </code></pre>
 <h3 id="6">
-<strong>6.花括号</strong>
+6.花括号
 </h3>
 <p>  前括号永远不应该独占一行; 后括号应当总是独占一行. 您可以在代码块只含单个语句时省略花括号; 但在处理这类单个语句时, 您必须 前后一致地要么全部使用花括号, 或者全部不用花括号.</p>
 <pre><code>  if (is.null(ylim)) {  ylim &lt;- c(0, 0.06)}</code></pre>
@@ -245,7 +283,7 @@ $(document).ready(function () {
 <pre><code>  if (is.null(ylim)) ylim &lt;- c(0, 0.06) 
   if (is.null(ylim)) {ylim &lt;- c(0, 0.06)}</code></pre>
 <h3 id="7">
-<strong>7.赋值</strong>
+7.赋值
 </h3>
 <p>  使用 &lt;- 进行赋值, 不用 = 赋值.</p>
 <p>  正例:</p>
@@ -253,14 +291,14 @@ $(document).ready(function () {
 <p>  反例:</p>
 <pre><code>  x = 5</code></pre>
 <h3 id="8">
-<strong>8.分号</strong>
+8.分号
 </h3>
 <p>  不要以分号结束一行, 也不要利用分号在同一行放多于一个命令. (分号是毫无必要的, 并且为了与其他Google编码风格指南保持一致, 此处同样略去.)</p>
 <h2>
-<strong>代码组织</strong>
+代码组织
 </h2>
 <h3 id="9">
-<strong>9.总体布局和顺序</strong>
+9.总体布局和顺序
 </h3>
 <p>  如果所有人都以相同顺序安排代码内容, 我们就可以更加轻松快速地阅读并理解他人的脚本了.</p>
 <ul>
@@ -273,7 +311,7 @@ $(document).ready(function () {
 </ul>
 <p>  单元测试应在另一个名为 原始的文件名_unittest.R 的独立文件中进行.</p>
 <h3 id="10">
-<strong>10.注释准则</strong>
+10.注释准则
 </h3>
 <p>  注释您的代码. 整行注释应以 # 后接一个空格开始.</p>
 <p>  行内短注释应在代码后接两个空格, #, 再接一个空格.</p>
@@ -284,7 +322,7 @@ $(document).ready(function () {
       ylab   = &quot;Frequency (count of campaignids)&quot;)
 </code></pre>
 <h3 id="11">
-<strong>11.函数的定义和调用</strong>
+11.函数的定义和调用
 </h3>
 <p>  函数定义应首先列出无默认值的参数, 然后再列出有默认值的参数.</p>
 <p>  函数定义和函数调用中, 允许每行写多个参数; 折行只允许在赋值语句外进行.</p>
@@ -298,11 +336,11 @@ $(document).ready(function () {
 </code></pre>
 <p>  理想情况下, 单元测试应该充当函数调用的样例 (对于包中的程序来说).</p>
 <h3 id="12">
-<strong>12.函数文档</strong>
+12.函数文档
 </h3>
 <p>  函数在定义行下方都应当紧接一个注释区. 这些注释应当由如下内容组成: 此函数的一句话描述; 此函数的参数列表, 用 Args: 表示, 对每个参数的描述 (包括数据类型); 以及对于返回值的描述, 以 Returns: 表示. 这些注释应当描述得足够充分, 这样调用者无须阅读函数中的任何代码即可使用此函数.</p>
 <h3 id="13">
-<strong>13.示例函数</strong>
+13.示例函数
 </h3>
 <pre><code>CalculateSampleCovariance &lt;- function(x, y, verbose = TRUE) {
 # Computes the sample covariance between two vectors.  
@@ -329,39 +367,38 @@ if (verbose)
   return(covariance)}
 </code></pre>
 <h3 id="14">
-<strong>14.TODO 书写风格</strong>
+14.TODO 书写风格
 </h3>
 <p>  编码时通篇使用一种一致的风格来书写 TODO.</p>
 <p>  TODO(您的用户名): 所要采取行动的明确描述</p>
 <h3 id="15">
-<strong>1.Attach</strong>
+1.Attach
 </h3>
 <p>  使用 attach 造成错误的可能数不胜数. 避免使用它.</p>
 <h3 id="16">
-<strong>2.函数</strong>
+2.函数
 </h3>
 <p>  错误 (error) 应当使用 stop() 抛出.</p>
 <h3 id="17">
-<strong>3.对象和方法</strong>
+3.对象和方法
 </h3>
 <p>  S 语言中有两套面向对象系统, S3 和 S4, 在 R 中这两套均可使用. S3 方法的可交互性更强, 更加灵活, 反之, S4 方法更加正式和严格. (对这两套系统的说明, 参见 Thomas Lumley 的文章 “Programmer’s Niche: A Simple Class, in S3 and S4”, 发表于 R News 4/1, 2004, 33 - 36 页:<a href="http://cran.r-project.org/doc/Rnews/Rnews_2004-1.pdf" class="uri">http://cran.r-project.org/doc/Rnews/Rnews_2004-1.pdf</a>.) 这里推荐使用 S3 对象和方法, 除非您有很强烈的理由去使用 S4 对象和方法. 使用 S4 对象的一个主要理由是在 C++ 代码中直接使用对象. 使用一个 S4 泛型/方法的主要理由是对双参数的分发. 避免混用 S3 和 S4: S4 方法会忽略 S3 中的继承, 反之亦然.</p>
 <h3 id="18">
-<strong>4.例外</strong>
+4.例外
 </h3>
 <p>  除非有不去这样做的好理由, 否则应当遵循以上描述的编码惯例. 例外包括遗留代码的维护和对第三方代码的修改.</p>
 <h3 id="18">
-<strong>5.结语</strong>
+5.结语
 </h3>
 <p>  遵守常识, 前后一致.如果您在编辑现有代码, 花几分钟看看代码的上下文并弄清它的风格. 如果其他人在 if 语句周围使用了空格, 那您也应该这样做. 如果他们的注释是用星号组成的小盒子围起来的, 那您也要这样写。</p>
 <p>  遵循编码风格准则的意义在于, 人们相当于有了一个编程的通用词汇表, 于是人们可以专注于您在 说什么, 而不是您是 怎么说 的. &gt;   我们在这里提供全局的编码风格规则以便人们了解这些词汇, 但局部风格也很重要. 如果您加入文件中的代码看起来和周围的已有代码截然不同, 那么代码阅读者的阅读节奏就会被破坏. 尽量避免这样做. OK, 关于如何写代码已经写得够多了; 代码本身要有趣的多. 编码愉快!</p>
 <h3 id="18">
-<strong>6.参考文献</strong>
+6.参考文献
 </h3>
 <p>  <a href="http://www.maths.lth.se/help/R/RCC/" class="uri">http://www.maths.lth.se/help/R/RCC/</a> - R Coding Conventions</p>
 <p>  <a href="http://ess.r-project.org/" class="uri">http://ess.r-project.org/</a> - For emacs users. This runs R in your emacs and has an emacs mode.</p>
+<p>  <a href="https://google.github.io/styleguide/Rguide.xml#spacing" class="uri">https://google.github.io/styleguide/Rguide.xml#spacing</a> - En version.</p>
 </blockquote>
-</div>
-</div>
 
 
 

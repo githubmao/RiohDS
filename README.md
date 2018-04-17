@@ -1,9 +1,28 @@
-# RiohDS数据代码管理
+<h1>RiohDS数据代码管理</h1>
 
-## 1. 仅针对R；
-## 2. 共享的代码请尽量遵循 Google's R Style Guide。
+<h2>1. 仅针对R；</h2>
+<h2>2. 共享的代码请尽量遵循 [Google's R Style Guide](#RStyle)风格；</h2>
+<h2>3. 新增功能函数规则：。</h2>
+<h3>&ensp;&ensp;&ensp;&ensp;+ 建立新的.R文件，并写入新增函数；</h3>
+<h3>&ensp;&ensp;&ensp;&ensp;+ 更新README.md文档中的[函数功能简要说明](#functionDescription)</h3>
+<h3>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;（如果是绘图语句，最好再给出样图）；</h3>
+<h3>&ensp;&ensp;&ensp;&ensp;+ Push更新文件。</h3>
 
-> **概要: R编码风格约定**
+****************************************************************************************************************
+
+<h2 id="functionDescription">函数功能简要说明</h2>
+
+1. **RenameSimDataV12**：重命名UC-win/Road ver12.0版本输出数据变量名.
+
+2. **RenameNCUTSimData**：重命名NCUT版本UC-win/Road(即ver10.0)输出数据变量名.
+
+3. **RenameSimDataV4**：重命名UC-win/Road ver4.0版本输出数据变量名.
+
+
+****************************************************************************************************************
+><h2 id="RStyle">Google's R Style Guide</h2>
+>
+> <h2>**概要: R编码风格约定**</h2>
 > 
 >[1. 文件命名](#1): 以 .R (大写) 结尾
 >
