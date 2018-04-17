@@ -4,7 +4,7 @@
 <h2>2. 共享的代码请尽量遵循 [Google's R Style Guide](#RStyle)风格；</h2>
 <h2>3. 新增功能函数规则：。</h2>
 <h3>&ensp;&ensp;&ensp;&ensp;+ 建立新的.R文件，并写入新增函数；</h3>
-<h3>&ensp;&ensp;&ensp;&ensp;+ 更新README.md文档中的[函数功能简要说明](#functionDescription)</h3>
+<h3>&ensp;&ensp;&ensp;&ensp;+ 更新README.md文档中的[函数功能简要说明](#functionDescription)，并注明函数用变量版本</h3>
 <h3>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;（如果是绘图语句，最好再给出样图）；</h3>
 <h3>&ensp;&ensp;&ensp;&ensp;+ Push更新文件。</h3>
 
@@ -17,6 +17,8 @@
 2. **RenameNCUTSimData**：重命名NCUT版本UC-win/Road(即ver10.0)输出数据变量名.
 
 3. **RenameSimDataV4**：重命名UC-win/Road ver4.0版本输出数据变量名.
+
+4. **CalcVectorSpeed**：计算沿道路方向的纵向速度和沿道路横断面的横向速度.(ver.4.0)
 
 
 ****************************************************************************************************************
