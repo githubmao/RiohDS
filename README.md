@@ -4,8 +4,8 @@
 <h2>2. 共享的代码请尽量遵循 [Google's R Style Guide](#RStyle)风格；</h2>
 <h2>3. 新增功能函数规则：。</h2>
 <h3>&ensp;&ensp;&ensp;&ensp;+ 建立新的.R文件，并写入新增函数；</h3>
-<h3>&ensp;&ensp;&ensp;&ensp;+ 更新README.md文档中的[函数功能简要说明](#functionDescription)，并注明函数用变量版本</h3>
-<h3>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;（如果是绘图语句，最好再给出样图）；</h3>
+<h3>&ensp;&ensp;&ensp;&ensp;+ 更新README.md文档中的[函数功能简要说明](#functionDescription)，</h3>
+<h3>&ensp;&ensp;&ensp;&ensp;并注明函数用变量版本（绘图语句，最好再给出样图）；</h3>
 <h3>&ensp;&ensp;&ensp;&ensp;+ Push更新文件。</h3>
 
 ****************************************************************************************************************
