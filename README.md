@@ -26,6 +26,29 @@
 
 4. **CalcVectorSpeed**：计算沿道路方向的纵向速度和沿道路横断面的横向速度.(ver.4.0)
 
+5. **CalcDrivingTraj**: 计算模拟车行车轨迹.(ver.12.0)
+
+6. **CalcBatchTraj**: 批量计算不同驾驶人模拟车行车轨迹.(ver.12.0)
+
+7. **CalcLCPoint**: 计算换道位置.(ver.12.0)
+
+8. **CalcBatchLCPoint**: 批量计算不同驾驶人换道位置.(ver.12.0)
+
+9. **CalcSpotSpeed**: 计算特征位置（桩号or行号）的车速.(ver12.0)
+
+10. **CalcBatchSpotSpeed**: 批量计算不同驾驶人特征位置的车速.(ver12.0)
+
+11. **CalcAccOutliers**: 计算加速度or减速度较大的点（2种方法可选）.(ver12.0)
+
+12. **CalcBatchAccOutliers**: 批量计算不同驾驶人加速度or减速度较大的点.(ver12.0)
+
+13. **CalcAppGas**: 计算驾驶人开始加速的位置.(ver12.0)
+
+14. **CalcBatchAppGas**: 批量计算不同驾驶人开始加速的位置.(ver12.0)
+
+15. **CalcAppBrake**: 计算驾驶人开始减速的位置（2种方法可选）.(ver12.0)
+
+16. **CalcBatchAppBrake**: 批量计算驾驶人开始减速的位置.(ver12.0)
 
 ****************************************************************************************************************
 > <h2 id="0">Google's R Style Guide</h2>
