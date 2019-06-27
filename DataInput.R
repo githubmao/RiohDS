@@ -1,11 +1,128 @@
 #-----------------------Code Description---------------------------------------#
 # Notes:
 # ver1.0: 20180416, by githubmao
+# ver2.0: 20190627, by githubmao
 #
 # Description: 各个版本的UC-win/Road驾驶模拟输出数据变量重命名。
 #              除ver4.0，重命名变量遵循“小驼峰命名法”，使命名后的变量名有意义。
-#              含UC-win/Road ver4.0, ver10.0（即NCUT版本）, ver12.0三个版本。
+#              含UC-win/Road ver4.0, ver10.0（即NCUT版本）, ver12.0, ver13.0。
 #------------------------------------------------------------------------------#
+
+
+# UC-win/Road ver13.0数据重命名----
+RenameUserVehicleDataV13 <- function(data){
+  # 重命名UC-win/Road ver13.0版本输出数据变量名。
+  #
+  # 输入：UC-win/Road ver13.0版本输出的UserVehicle数据。
+  # 输出：重命名后的数据框。
+  
+  kSimDataNewName <- c("simTime",  # elapsedTime
+                       "absoluteTime",  # absoluteTime
+                       "logType",  # typename
+                       "carModel",  # model
+                       "logDescription",  # description
+                       "lightState",  # lightStatus
+                       "roadName",  # roadName
+                       "roadBumps",  # roadBumps
+                       "keyState",  # ignitionKey
+                       "wiperState",  # wiper
+                       "trailerModel",  # trailer
+                       "scenName",  # scenarioName
+                       "dynamicsSimTime",  # CarSim_TruckSimTime
+                       "positionX",  # position.x.
+                       "positionY",  # position.y.
+                       "positionZ",  # position.z.
+                       "yawAngle",  # yawAngle
+                       "pitchAngle",  # pitchAngle
+                       "rollAngle",  # rollAngle
+                       "directionX",  # direction.x.
+                       "directionY",  # direction.y.
+                       "directionZ",  # direction.z.
+                       "bodyPitchAngle",  # bodyPitchAngle
+                       "bodyRollAngle",  # bodyRollAngle
+                       "logID",  # ID
+                       "RPM",  # RPM
+                       "gearNumber",  # gearNumber
+                       "speedXMS",  # speedVecter.x.
+                       "speedYMS",  # speedVecter.y.
+                       "speedZMS",  # speedVecter.z.
+                       "speedKMH",  # speedInKmPerHour
+                       "speedMS",  # speedInMetresPerSec
+                       "accXMS2",  # localAccelVector.x.
+                       "accYMS2",  # localAccelVector.y.
+                       "accZMS2",  # localAccelVector.z.
+                       "bodyRotSpeedX",  # bodyRotSpeed.x.
+                       "bodyRotSpeedY",  # bodyRotSpeed.y.
+                       "bodyRotSpeedZ",  # bodyRotSpeed.z.
+                       "bodyRotAccX",  # bodyRotAccel.x.
+                       "bodyRotAccY",  # bodyRotAccel.y.
+                       "bodyRotAccZ",  # bodyRotAccel.z.
+                       "rotSpeedX",  # rotationSpeed.x.
+                       "rotSpeedY",  # rotationSpeed.y.
+                       "rotSpeedZ",  # rotationSpeed.z.
+                       "rotAccX",  # rotationAccel.x.
+                       "rotAccY",  # rotationAccel.y.
+                       "rotAccZ",  # rotationAccel.z.
+                       "disTravelled",  # distanceTravelled
+                       "appSteering",  # steering
+                       "steeringVelocity",  # steeringVelocity
+                       "turningCurvature",  # turningCurvature
+                       "appGasPedal",  # accelPedal
+                       "appBrake",  # brakePedal
+                       "appClutchPedal",  # clutchPedal
+                       "isHandbrake",  # handbrake
+                       "isHorn",  # horn
+                       "carWidth",  # carWidth
+                       "carLength",  # carLength
+                       "carHeight",  # carHeight
+                       "flWheelFrictionCoeX",  # FLWheelFrictionCoe_x
+                       "flWheelFrictionCoeY",  # FLWheelFrictionCoe_y
+                       "frWheelFrictionCoeX",  # FRWheelFrictionCoe_x
+                       "frWheelFrictionCoeY",  # FRWheelFrictionCoe_y
+                       "rlWheelFrictionCoeX",  # RLWheelFrictionCoe_x
+                       "rlWheelFrictionCoeY",  # RLWheelFrictionCoe_y
+                       "rrWheelFrictionCoeX",  # RRWheelFrictionCoe_x
+                       "rrWheelFrictionCoeY",  # RRWheelFrictionCoe_y
+                       "automaticControl",  # automaticControl
+                       "dragForce",  # dragForce
+                       "carMass",  # carWeight
+                       "carWheelBase",  # wheelBase
+                       "centerOfGravityHeight",  # centerOfGravityHeight
+                       "centerOfGravityPosition",  # centerOfGravityPosition
+                       "rollAxisHeight",  # rollAxisHeight
+                       "trailerAngle",  # trailerAngle
+                       "trailerPitchAngle",  # trailerPitchAngle
+                       "trailerWheelBase",  # trailerWheelbase
+                       "isInIntersection",  # inIntersection
+                       "disFromRoadStart",  # distanceAlongRoad
+                       "disToLeftBorder",  # distanceToLeftBorder
+                       "disToRightBorder",  # distanceToRightBorder
+                       "carriagewayWidth",  # carriagewayWidth
+                       "roadOffset",  # offsetFromRoadCenter
+                       "laneOffset",  # offsetFromLaneCenter
+                       "longitudinalSlope",  # roadLongitudinalSlope
+                       "lateralSlope",  # roadLateralSlope
+                       "laneNumber",  # laneNumber
+                       "laneWidth",  # laneWidth
+                       "laneDirectionX",  # laneDirection.x.
+                       "laneDirectionY",  # laneDirection.y.
+                       "laneDirectionZ",  # laneDirection.z.
+                       "laneCurvature",  # laneCurvature
+                       "isDrivingForwards",  # drivingForwards
+                       "speedLimit",  # speedLimit
+                       "isSpeedOver",  # speedOver
+                       "leftLaneOverlap",  # leftLaneOverLap
+                       "rightLaneOverlap",  # rightLaneOverLap
+                       "frontVehicleTTC",  # frontVehicleTTC
+                       "frontVehicleDis",  # frontVehicleDistance
+                       "frontVehicleSpeed",  # frontVehicleSpeed
+                       "rearVehicleTTC",  # rearVehicleTTC
+                       "rearVehicleDis",  # rearVehicleDistance
+                       "rearVehicleSpeed")  # rearVehicleSpeed
+    
+  names(data) <- kSimDataNewName
+  return(data)
+}
 
 
 # UC-win/Road ver12.0数据重命名----
@@ -87,7 +204,7 @@ RenameSimDataV12 <- function(data){
                        "carriagewayWidth",         # carriagewayWidth
                        "roadOffset",               # offsetFromRoadCenter
                        "laneOffset",               # offsetFromLaneCenter
-                       "logitudinalSlope",         # roadLongitudinalSlop
+                       "longitudinalSlope",         # roadLongitudinalSlop
                        "lateralSlope",             # roadLateralSlop
                        "laneNumber",               # laneNumber
                        "laneWidth",                # laneWidth
@@ -95,7 +212,7 @@ RenameSimDataV12 <- function(data){
                        "laneDirectionY",           # laneDirection Y
                        "laneDirectionZ",           # laneDirection Z
                        "laneCurvature",            # laneCurvature
-                       "isDrivingForward",         # drivingForwards
+                       "isDrivingForwards",         # drivingForwards
                        "speedLimit",               # speedLimit
                        "isSpeedOver",              # speedOver
                        "leftLaneOverlap",          # leftLaneOverLap
