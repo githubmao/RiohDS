@@ -50,6 +50,8 @@
 
 16. **CalcBatchAppBrake**: 批量计算驾驶人开始减速的位置.(ver12.0)
 
+17. **RenameUserVehicleDataV13**: 重命名UC-win/Road ver13.0版本输出的UserVehicle数据变量名.
+
 ****************************************************************************************************************
 > <h2 id="0">Google's R Style Guide</h2>
 >
