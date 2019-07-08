@@ -2,6 +2,7 @@
 # Notes:
 # ver1.0: 20180416, by githubmao
 # ver2.0: 20190627, by githubmao
+# ver2.1: 20190708, by githubmao，补充RenameUserVehicleDataV13, carType数据项
 #
 # Description: 各个版本的UC-win/Road驾驶模拟输出数据变量重命名。
 #              除ver4.0，重命名变量遵循“小驼峰命名法”，使命名后的变量名有意义。
@@ -20,6 +21,7 @@ RenameUserVehicleDataV13 <- function(data){
                        "absoluteTime",  # absoluteTime
                        "logType",  # typename
                        "carModel",  # model
+                       "carType",  # carType
                        "logDescription",  # description
                        "lightState",  # lightStatus
                        "roadName",  # roadName
